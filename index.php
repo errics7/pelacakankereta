@@ -12,7 +12,7 @@ $connection = new Database($host, $user, $pass, $database);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Skripsi - Pelacakan Kereta Api</title>
+    <title>Skripsi - Pelacakan Riwayat Kereta Api</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
