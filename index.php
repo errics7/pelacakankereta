@@ -37,13 +37,12 @@ $connection = new Database($host, $user, $pass, $database);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="">Skripsi - Pemantauan Kereta Api</a>
+          <a class="navbar-brand" href="">Skripsi - Pemantauan Riwayat Kereta Api</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li><a href="?page=dashboard"><i class="fa fa-dashboard"></i> Dashboard </a></li>
             <li><a href="?page=data_kereta"><i class="fa fa-bar-chart-o"></i> Data Kereta Api </a></li>
             <li><a href="?page=data_stasiun"><i class="fa fa-table"></i> Data Stasiun </a></li>
             <li><a href="?page=data_riwayat"><i class="fa fa-edit"></i> Data Riwayat Perjalanan Stasiun</a></li>
@@ -53,12 +52,9 @@ $connection = new Database($host, $user, $pass, $database);
 
       <div id="page-wrapper">
         <?php
-        if(@$_GET['page'] == 'dashboard' || @$_GET['page'] == ''){ include "views/dashboard.php";} 
         elseif (@$_GET['page'] == 'data_kereta'){ include "views/data_kereta.php";}
         elseif (@$_GET['page'] == 'data_stasiun'){ include "views/data_stasiun.php";} 
-        elseif (@$_GET['page'] == 'data_riwayat'){ include "views/data_riwayat.php";}
-        elseif (@$_GET['page'] == 'login'){ include "views/dash_login.php";}
-        elseif (@$_GET['page'] == 'logout'){ include "models/logout.php";} 
+        elseif (@$_GET['page'] == '' || @$_GET['page'] == 'data_riwayat'){ include "views/data_riwayat.php";}
         elseif (@$_GET['page'] == 'insert'){ include "config/rfid_insert.php";} 
         ?>
       </div><!-- /#page-wrapper -->
