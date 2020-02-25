@@ -21,11 +21,11 @@ $rwt = new Riwayat($connection);
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>History</th>
                                 <th>Nama Kereta</th>
                                 <th>Destinasi Stasiun </th>
                                 <th>Stasiun Sebelumnya</th>
                                 <th>Stasiun Sekarang </th>
-                                <th>Tiba Pada</th>
                                 <th>Stasiun Selanjutnya</th>
                             </tr>
                         </thead>
@@ -38,11 +38,11 @@ $rwt = new Riwayat($connection);
                             ?>
                                 <tr>
                                     <td align="center"><?php echo $no++."."; ?></td>
+                                    <td><?php echo $data->histori; ?></td>
                                     <td><?php echo $data->nama_kereta; ?></td>
                                     <td><?php echo $data->nama_station; ?></td>
                                     <td><?php echo $data->prev_station; ?></td>
                                     <td><?php echo $data->curr_station; ?></td>
-                                    <td><?php echo $data->waktu_tiba_curr; ?></td>
                                     <td><?php echo $data->next_station; ?></td>
                                 </tr>
                             <?php
