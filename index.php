@@ -52,9 +52,9 @@ $connection = new Database($host, $user, $pass, $database);
 
       <div id="page-wrapper">
         <?php
+        if (@$_GET['page'] == '' || @$_GET['page'] == 'data_riwayat'){ include "views/data_riwayat.php";}
         elseif (@$_GET['page'] == 'data_kereta'){ include "views/data_kereta.php";}
         elseif (@$_GET['page'] == 'data_stasiun'){ include "views/data_stasiun.php";} 
-        elseif (@$_GET['page'] == '' || @$_GET['page'] == 'data_riwayat'){ include "views/data_riwayat.php";}
         elseif (@$_GET['page'] == 'insert'){ include "config/rfid_insert.php";} 
         ?>
       </div><!-- /#page-wrapper -->
